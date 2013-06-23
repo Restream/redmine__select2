@@ -1,4 +1,5 @@
 require 'redmine'
+require 'redmine_select2'
 
 Redmine::Plugin.register :redmine_select2 do
   name        'Redmine Select2 plugin'
