@@ -3,6 +3,7 @@ require 'welcome_controller'
 
 class Select2IncludesTest < ActionController::TestCase
   fixtures :projects, :news, :users, :members
+  include Redmine::I18n
 
   def setup
     @controller = WelcomeController.new
@@ -11,11 +12,23 @@ class Select2IncludesTest < ActionController::TestCase
     User.current = nil
   end
 
-  def test_index
+  def test_script_included
     get :index
     assert_response :success
     assert_select 'script[src=?]', /.+redmine_select2\/javascripts\/select2\.min\.js.+/
+  end
+
+  def test_stylesheet_included
+    get :index
+    assert_response :success
     assert_select 'link[href=?]', /.+redmine_select2\/stylesheets\/select2\.css.+/
+  end
+
+  def test_locale_loaded
+    Setting.default_language = 'ru'
+    get :index
+    assert_response :success
+    assert_select 'script[src=?]', /.+redmine_select2\/javascripts\/select2_locale_ru\.js.+/
   end
 
 end
