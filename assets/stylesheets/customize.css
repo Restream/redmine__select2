@@ -1,0 +1,52 @@
+.select2-field input {
+  padding: 0;
+}
+
+ul.select2-results {
+  max-height: 400px;
+}
+
+select:not([multiple='multiple']) {
+  -webkit-padding-end: 22px;
+  -webkit-padding-start: 8px;
+}
+
+select:not([multiple='multiple']) {
+  -webkit-appearance: button;
+  -webkit-border-radius: 4px;
+  -webkit-user-select: none;
+
+  background-color: #fff;
+  background-image: url(/plugin_assets/redmine_select2/images/select2-arrow.png), -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
+  background-image: url(/plugin_assets/redmine_select2/images/select2-arrow.png), -o-linear-gradient(bottom, #eeeeee 0%, #ffffff 50%);
+  background-image: url(/plugin_assets/redmine_select2/images/select2-arrow.png), -ms-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
+  background-position: center right;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+
+  background-image: url(/plugin_assets/redmine_select2/images/select2-arrow.png), linear-gradient(top, #ffffff 0%, #eeeeee 50%);
+
+  border: 1px solid #aaa;
+  border-radius: 4px 4px 4px 4px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 22px;
+  padding: 0 13px 0 3px;
+
+  font: inherit;
+}
+
+@-moz-document url-prefix() {
+  select:not([multiple='multiple']) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+    background-image: url("/plugin_assets/redmine_select2/images/select2-arrow.png"), -moz-linear-gradient(center bottom , #EEEEEE 0%, white 50%);
+
+    padding: 1px 3px 0 2px;
+  }
+}
