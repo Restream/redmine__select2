@@ -8,10 +8,10 @@ env:
   - REDMINE_VER=2.1.6
   - REDMINE_VER=2.2.4
   - REDMINE_VER=2.3.3
-global:
-  - PLUGIN_NAME=redmine_select2
-  - DB=mysql
 matrix:
+  global:
+    - PLUGIN_NAME=redmine_select2
+    - DB=mysql
   exclude:
     - rvm: 2.0.0
       env: REDMINE_VER=2.1.6
