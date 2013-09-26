@@ -12,6 +12,11 @@ env:
     - REDMINE_VER=2.1.6
     - REDMINE_VER=2.2.4
     - REDMINE_VER=2.3.3
+    exclude: # http://www.redmine.org/issues/12787
+      - rvm: 2.0.0
+        env: REDMINE_VER=2.1.6
+      - rvm: 2.0.0
+        env: REDMINE_VER=2.2.4
 
 before_install:
   - export REDMINE_PATH=$HOME/redmine
