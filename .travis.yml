@@ -5,14 +5,15 @@ rvm:
   - 1.9.3
   - 2.0.0
 env:
+  - REDMINE_VER=2.1.6
+  - REDMINE_VER=2.2.4
+  - REDMINE_VER=2.3.3
+env:
   global:
     - PLUGIN_NAME=redmine_select2
     - DB=mysql
   matrix:
-    - REDMINE_VER=2.1.6
-    - REDMINE_VER=2.2.4
-    - REDMINE_VER=2.3.3
-    - exclude: # http://www.redmine.org/issues/12787
+    exclude:
       - rvm: 2.0.0
         env: REDMINE_VER=2.1.6
       - rvm: 2.0.0
@@ -35,4 +36,3 @@ before_script:
 
 script:
   - rake redmine:plugins:test NAME=$PLUGIN_NAME
-
