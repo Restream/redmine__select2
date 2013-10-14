@@ -15,20 +15,20 @@ class Select2IncludesTest < ActionController::TestCase
   def test_script_included
     get :index
     assert_response :success
-    assert_select 'script[src=?]', /.+redmine_select2\/javascripts\/select2\.min\.js.+/
+    assert_select 'script[src=?]', /.+redmine__select2\/javascripts\/select2\.min\.js.+/
   end
 
   def test_stylesheet_included
     get :index
     assert_response :success
-    assert_select 'link[href=?]', /.+redmine_select2\/stylesheets\/select2\.css.+/
+    assert_select 'link[href=?]', /.+redmine__select2\/stylesheets\/select2\.css.+/
   end
 
   def test_locale_loaded
     Setting.default_language = 'ru'
     get :index
     assert_response :success
-    assert_select 'script[src=?]', /.+redmine_select2\/javascripts\/select2_locale_ru\.js.+/
+    assert_select 'script[src=?]', /.+redmine__select2\/javascripts\/select2_locale_ru\.js.+/
   end
 
 end

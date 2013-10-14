@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag 'select2.css', :plugin => 'redmine__select2' %>
+<%= stylesheet_link_tag 'customize.css', :plugin => 'redmine__select2' %>
+<%= javascript_include_tag 'select2.min.js', :plugin => 'redmine__select2' %>
+<%=
+  url = "select2_locale_#{current_language}.js"
+  file_path = File.join(Redmine::Plugin.public_directory, 'redmine__select2', 'javascripts', url)
+  javascript_include_tag url, :plugin => 'redmine__select2' if File.exists?(file_path)
+%>
