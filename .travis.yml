@@ -4,6 +4,7 @@ services:
   - mysql
 
 rvm:
+  - 1.8.7
   - 1.9.3
   - 2.0.0
 
@@ -27,9 +28,6 @@ before_install:
   - ln -s $TRAVIS_BUILD_DIR $REDMINE_PATH/plugins/$PLUGIN_NAME
   - cp config/database-$DB-travis.yml $REDMINE_PATH/config/database.yml
   - cd $REDMINE_PATH
-
-install:
-  - bundle install
 
 before_script:
   - rake db:create
