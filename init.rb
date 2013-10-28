@@ -5,7 +5,7 @@ Redmine::Plugin.register :redmine__select2 do
   name        'Redmine Select2 plugin'
   description 'Plugin add select2 component to redmine'
   author      'Undev'
-  version     '1.0.1'
+  version     '1.0.2'
   url         'https://github.com/Undev/redmine__select2'
 
   requires_redmine :version_or_higher => '2.1'
