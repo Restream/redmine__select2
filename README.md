@@ -1,6 +1,6 @@
 # Redmine Select2 plugin
 
-This plugin add Select2 3.4.0 component to redmine for using by other plugins
+This plugin add Select2 3.4.6 component to redmine for using by other plugins
 
 ## Project health
 
