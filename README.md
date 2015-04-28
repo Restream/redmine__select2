@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Undev/redmine__select2.png?branch=master)](https://travis-ci.org/Undev/redmine__select2)
 
-This plugin adds Select2 3.4.0 (https://select2.github.io/) to Redmine.
+This plugin adds [Select2 3.4.0] (https://select2.github.io/) to Redmine.
 
 ## Compatibility
 
