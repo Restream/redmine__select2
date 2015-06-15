@@ -9,6 +9,7 @@ rvm:
 env:
   - REDMINE_VER=2.3.4
   - REDMINE_VER=2.4.7
+  - REDMINE_VER=2.5.3
   - REDMINE_VER=2.6.5
   - REDMINE_VER=3.0.3
 
