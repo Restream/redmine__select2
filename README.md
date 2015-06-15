@@ -6,7 +6,7 @@ This plugin adds [Select2 3.4.0] (https://select2.github.io/) to Redmine.
 
 ## Compatibility
 
-This plugin version is compatible only with Redmine 2.1.x and later.
+This plugin version is compatible only with Redmine 2.3.x and later.
 
 ## Installation
 
