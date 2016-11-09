@@ -1,12 +1,15 @@
 # Redmine Select2 Plugin
 
-[![Build Status](https://travis-ci.org/Undev/redmine__select2.png?branch=master)](https://travis-ci.org/Undev/redmine__select2)
+[![Build Status](https://travis-ci.org/Restream/redmine__select2.png?branch=master)](https://travis-ci.org/Restream/redmine__select2)
 
-This plugin adds [Select2 3.4.0] (https://select2.github.io/) to Redmine.
+This plugin adds [Select2 4.0.3] (https://select2.github.io/) to Redmine.
+Jquery loaded by Redmine is too old and has some bugs. 
+For solving this problem this plugin load latest jQuery and store in window.jql variable.
+By using noConflict() we do not replace "old" jquery version but only add new one.
 
 ## Compatibility
 
-This plugin version is compatible only with Redmine 2.3.x and later.
+This plugin version is compatible only with Redmine 3.x and later.
 
 ## Installation
 
@@ -21,7 +24,7 @@ This plugin version is compatible only with Redmine 2.3.x and later.
             
       Copy the plugin from GitHub using the following commands:
       
-            git clone https://github.com/Undev/redmine__select2.git plugins/redmine__select2
+            git clone https://github.com/Restream/redmine__select2.git plugins/redmine__select2
             
 2. Install the required gems using the command:  
 
@@ -40,7 +43,7 @@ Now you should be able to see the plugin in **Administration > Plugins**.
 
 ## Usage
 
-This plugin is used by other Redmine plugins, for example, [Redmine Customization Plugin](https://github.com/Undev/redmine_customize), [Redmine Digest Plugin](https://github.com/Undev/redmine_digest), and [Redmine Simple Plugin](https://github.com/Undev/redmine_simple).
+This plugin is used by other Redmine plugins, for example, [Redmine Customization Plugin](https://github.com/Restream/redmine_customize), [Redmine Digest Plugin](https://github.com/Restream/redmine_digest), and [Redmine Simple Plugin](https://github.com/Restream/redmine_simple).
 
 ## Maintainers
 
@@ -48,7 +51,7 @@ Danil Tashkinov, [github.com/nodecarter](https://github.com/nodecarter)
 
 ## License
 
-Copyright (c) 2014 Undev
+Copyright (c) 2016 Restream
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

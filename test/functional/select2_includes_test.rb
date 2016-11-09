@@ -6,29 +6,30 @@ class Select2IncludesTest < ActionController::TestCase
   include Redmine::I18n
 
   def setup
-    @controller = WelcomeController.new
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
+    @controller  = WelcomeController.new
+    @request     = ActionController::TestRequest.new
+    @response    = ActionController::TestResponse.new
     User.current = nil
   end
 
   def test_script_included
     get :index
     assert_response :success
-    assert_select 'script[src=?]', /.+redmine__select2\/javascripts\/select2\.min\.js.+/
+    assert_select "script:match('src', ?)", /redmine__select2\/javascripts\/select2\.full\.min\.js/
   end
 
   def test_stylesheet_included
     get :index
     assert_response :success
-    assert_select 'link[href=?]', /.+redmine__select2\/stylesheets\/select2\.css.+/
+    assert_select "link:match('href', ?)", /redmine__select2\/stylesheets\/select2\.min\.css/
   end
 
   def test_locale_loaded
     Setting.default_language = 'ru'
     get :index
     assert_response :success
-    assert_select 'script[src=?]', /.+redmine__select2\/javascripts\/select2_locale_ru\.js.+/
+    # assert_equal 'x', response.body
+    assert_select "script:match('src', ?)", /redmine__select2\/javascripts\/i18n\/ru\.js/
   end
 
 end
